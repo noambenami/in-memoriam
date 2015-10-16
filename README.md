@@ -7,7 +7,7 @@ stable, quietly improving performance for a host of scenarios, such as:
 - Caching lookup data fetched from remote REST services
 
 This module exports the cache constructor, making usage as simple as:
-'''JavaScript
+```JavaScript
   var Cache = require('johnny-cache');
   // Create a 
   var capacity = 1000; // Least recently accessed/oldest items are removed when capacity is exceeded
@@ -15,14 +15,14 @@ This module exports the cache constructor, making usage as simple as:
   var cache = new Cache(capacity, ttl);
   cache.set('names', [ 'joe', 'jim', 'jill', 'jane' ]);
   var names = cache.get('names');
-'''
+```
     
 The number of cache instances that can be created is limited only by memory. Note that caches will execute
 a callback every ttl ms to execute eviction logic, so very high capacity caches with a high degree of churn
 may have CPU impact. Use caches wisely, and tune them using real world data.
 
 Caches maintain metrics to help with tuning and management; a call to cache.stats will return something like:
-'''JSON
+```JSON
   {
     hits:         235,
     misses:       312,
@@ -32,4 +32,4 @@ Caches maintain metrics to help with tuning and management; a call to cache.stat
     expirations:  12,
     size:         199
   };
-'''
+```
