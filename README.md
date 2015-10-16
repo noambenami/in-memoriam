@@ -24,12 +24,12 @@ may have CPU impact. Use caches wisely, and tune them using real world data.
 Caches maintain metrics to help with tuning and management; a call to cache.stats will return something like:
 ```JSON
   {
-    hits:         235,
-    misses:       312,
-    inserts:      255,
-    updates:      42,
-    evictions:    122,
-    expirations:  12,
-    size:         199
+    "hits":         235,
+    "misses":       312,
+    "inserts":      255,
+    'updates":      42,
+    "evictions":    122,
+    "expirations":  12,
+    "size":         199
   };
 ```
