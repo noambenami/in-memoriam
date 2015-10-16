@@ -1,0 +1,36 @@
+{
+  "name": "johnny-cache",
+  "version": "1.0.0",
+  "description": "Easy to use, high-speed O(1) for all operations, in-memory cache with both ttl and capacity support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noambenami/johnny-cache.git"
+  },
+  "keywords": [
+    "cache",
+    "performance",
+    "ttl",
+    "caching",
+    "high",
+    "speed",
+    "simple"
+  ],
+  "author": "Noam Ben-Ami",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noambenami/johnny-cache/issues"
+  },
+  "homepage": "https://github.com/noambenami/johnny-cache#readme",
+  "devDependencies": {
+    "chai":                         "~2.3.0",
+    "grunt":                        "~0.4.5",
+    "grunt-contrib-jshint":         "~0.11.2",
+    "grunt-jscs":                   "~1.8.0",
+    "grunt-mocha-test":             "~0.12.7",
+    "mocha":                        "~2.2.4"
+  }
+}

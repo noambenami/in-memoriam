@@ -1,0 +1,43 @@
+{
+  "node":          true,
+
+  "bitwise":       true,
+  "boss":          true,
+  "camelcase":     true,
+  "curly":         true,
+  "debug":         true,
+  "eqeqeq":        true,
+  "eqnull":        true,
+  "esnext":        true,
+  "expr":          true,
+  "forin":         true,
+  "freeze":        true,
+  "globalstrict":  true,
+  "immed":         true,
+  "indent":        2,
+  "latedef":       "nofunc",
+  "maxcomplexity": 11,
+  "newcap":        true,
+  "noarg":         true,
+  "noempty":       true,
+  "nonew":         true,
+  "quotmark":      "single",
+  "strict":        true,
+  "trailing":      true,
+  "undef":         true,
+  "unused":        true,
+
+  "predef": [
+  ],
+
+  "overrides": {
+    "**/*.spec.js": {
+      "mocha":  true,
+      "globals": {
+        "should":   false,
+        "describe": false,
+        "it":       false
+      }
+    }
+  }
+}
