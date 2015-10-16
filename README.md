@@ -27,7 +27,7 @@ Caches maintain metrics to help with tuning and management; a call to cache.stat
     "hits":         235,
     "misses":       312,
     "inserts":      255,
-    'updates":      42,
+    "updates":      42,
     "evictions":    122,
     "expirations":  12,
     "size":         199
