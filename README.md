@@ -1,4 +1,4 @@
-# johnny-cache
+# in-memoriam
 Easy to use, high-speed O(1) to O(n) for all operations, in-memory key-value cache with both ttl and capacity support.
 This caching system has been used in multiple production systems for a while now and has proven
 stable, quietly improving performance for a host of scenarios, such as:
@@ -8,7 +8,7 @@ stable, quietly improving performance for a host of scenarios, such as:
 
 This module exports the cache constructor, making usage as simple as:
 ```JavaScript
-  var Cache = require('johnny-cache');
+  var Cache = require('in-memoriam');
   // Create a 
   var capacity = 1000; // Least recently accessed/oldest items are removed when capacity is exceeded
   var ttl = 10000; // TTL is in milliseconds. Items not accessed by end of TTL are evicted.
