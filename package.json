@@ -1,14 +1,14 @@
 {
-  "name": "johnny-cache",
+  "name": "in-memoriam",
   "version": "1.0.0",
   "description": "Easy to use, high-speed O(1) for all operations, in-memory cache with both ttl and capacity support.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noambenami/johnny-cache.git"
+    "url": "git+https://github.com/noambenami/in-memoriam.git"
   },
   "keywords": [
     "cache",
@@ -22,9 +22,9 @@
   "author": "Noam Ben-Ami",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/noambenami/johnny-cache/issues"
+    "url": "https://github.com/noambenami/in-memoriam/issues"
   },
-  "homepage": "https://github.com/noambenami/johnny-cache#readme",
+  "homepage": "https://github.com/noambenami/in-memoriam#readme",
   "devDependencies": {
     "chai":                         "~2.3.0",
     "grunt":                        "~0.4.5",
