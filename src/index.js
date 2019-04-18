@@ -7,9 +7,9 @@
  * @constructor
  * @param {Number} Capacity Maximum number of items in the cache. When
  *                 exceeded, oldest item is evicted to make room.
- * @param {Number} [ttl] Number of milliseconds items can live in the cache,
- *                 renewed on every get. If not specified, objects stay in the
- *                 cache until removed due to cache capacity being exceeded.
+ * @param {Number} [ttl] Number of milliseconds items can live in the cache.
+ *                 If not specified, objects stay in the cache until removed
+ *                 due to cache capacity being exceeded.
  *                 For immutable data, leaving ttl empty is recommended.
  */
 
@@ -43,13 +43,9 @@ module.exports = function (capacity, ttl) {
    * @param {*} value
    */
   self.set = function (key, value) {
-    var entry = cache.get(key);
+    var entry = cache.remove(key);
     if (entry) {
-      // Existing item, just update the value. The get
-      // operation will have updated the entry's ttl.
-      entry.value = value;
       self.stats.updates++;
-      return;
     }
     // New item, make room for it if needed
     if (self.stats.size() === capacity) {
@@ -69,7 +65,7 @@ module.exports = function (capacity, ttl) {
   };
 
   /**
-   * Gets the key and if found, updates its expiration time
+   * Gets the key and if found, make it the newest one to avoid eviction
    */
   self.get = function (key) {
     var entry = cache.remove(key);

@@ -66,4 +66,24 @@ describe('Cache', function () {
     cache.get('b').should.be.equal(2);
     cache.get('c').should.be.equal(3);
   });
+
+  it('overriding value should reset ttl', function (done) {
+    var cache = new Cache(2, 200);
+
+    cache.set('a', 1);
+    cache.set('b', 2);
+
+    setInterval(function () {
+      cache.set('a', 3);
+    }, 150);
+
+    setTimeout(function () {
+      // Cache updated entries should not have expired
+      cache.stats.size().should.be.equal(1);
+      var bIsNull = cache.get('b') === null;
+      bIsNull.should.be.equal(true);
+      cache.get('a').should.be.equal(3);
+      done();
+    }, 220);
+  });
 });
