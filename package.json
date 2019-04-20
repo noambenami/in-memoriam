@@ -1,6 +1,6 @@
 {
   "name": "in-memoriam",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy to use, high-speed O(1) for all operations, in-memory cache with both ttl and capacity support.",
   "main": "src/index.js",
   "scripts": {
@@ -26,11 +26,11 @@
   },
   "homepage": "https://github.com/noambenami/in-memoriam#readme",
   "devDependencies": {
-    "chai":                         "~2.3.0",
-    "grunt":                        "~0.4.5",
-    "grunt-contrib-jshint":         "~0.11.2",
-    "grunt-jscs":                   "~1.8.0",
-    "grunt-mocha-test":             "~0.12.7",
-    "mocha":                        "~2.2.4"
+    "chai": "~2.3.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.11.2",
+    "grunt-jscs": "~1.8.0",
+    "grunt-mocha-test": "~0.12.7",
+    "mocha": "~2.2.4"
   }
 }
