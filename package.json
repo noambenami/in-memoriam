@@ -1,6 +1,6 @@
 {
   "name": "in-memoriam",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Easy to use, high-speed O(1) for all operations, in-memory cache with both ttl and capacity support.",
   "main": "src/index.js",
   "scripts": {
