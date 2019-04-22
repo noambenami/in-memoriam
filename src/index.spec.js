@@ -6,15 +6,22 @@ var Cache = require('./');
 describe('Cache', function () {
   var cache = new Cache(5, 100);
 
-  it('can store & retrieve objects', function () {
+  it('can store, retrieve and delete objects', function () {
 
     cache.set('a', 1);
     cache.set('b', 2);
     cache.set('c', 3);
+    cache.set('d', 4);
 
     cache.get('a').should.be.equal(1);
     cache.get('b').should.be.equal(2);
     cache.get('c').should.be.equal(3);
+    cache.get('d').should.be.equal(4);
+
+    cache.remove('d');
+
+    var dIsNull = cache.get('d') === null;
+    dIsNull.should.be.equal(true);
   });
 
   it('expire objects', function (done) {
