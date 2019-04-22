@@ -22,6 +22,13 @@ describe('Cache', function () {
 
     var dIsNull = cache.get('d') === null;
     dIsNull.should.be.equal(true);
+
+    cache.stats.size().should.be.equal(3);
+    cache.stats.deletes.should.be.equal(1);
+    cache.get('a').should.be.equal(1);
+    cache.get('b').should.be.equal(2);
+    cache.get('c').should.be.equal(3);
+
   });
 
   it('expire objects', function (done) {

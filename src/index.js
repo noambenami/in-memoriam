@@ -82,6 +82,10 @@ module.exports = function (capacity, ttl) {
 
   /**
    * Remove an existing key
+   *
+   * @param {String} key
+   *
+   * @returns {Object} the entry that was removed or null if key was not found
    */
   self.remove = function (key) {
     var entry = cache.remove(key);
