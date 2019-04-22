@@ -32,6 +32,7 @@ module.exports = function (capacity, ttl) {
     updates:      0,
     evictions:    0,
     expirations:  0,
+    deletes:      0,
     size:         cache.length
   };
 
@@ -77,6 +78,21 @@ module.exports = function (capacity, ttl) {
     }
     self.stats.misses++;
     return null;
+  };
+
+  /**
+   * Remove an existing key
+   *
+   * @param {String} key
+   *
+   * @returns {Object} the entry that was removed or null if key was not found
+   */
+  self.remove = function (key) {
+    var entry = cache.remove(key);
+    if (entry) {
+      self.stats.deletes++;
+    }
+    return entry;
   };
 
   // Private methods
